@@ -1,0 +1,26 @@
+Rules
+    -> Variables names are case sensitive;
+    -> Only letters,digits.underscore and $ is allowed.
+    -> Space isn't allowed
+    -> Only a letter, underscore or & should be the first character
+    -> Reserved words cannot be Variable names.
+
+Reserved words have a special meaning a javascript and as such cannot be used a Variable names.
+
+var: not used now days.
+here caribles and can be redeclared.
+let : Variable cannot be re-declared but can be updated.
+
+Data Types
+    PRIMITIVE DATA TYPES
+        Number
+        String
+        Boolean
+        Undefined
+        Null 
+        BigInt used to sotre numbers
+        Symbol
+    NON PRIMITIVE DATA TYPES
+        objects typeof null is objects
+
+
