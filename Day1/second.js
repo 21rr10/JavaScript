@@ -1,18 +1,22 @@
-//let is used to declare and define the variables and can also be updated. let has block scope
+//let is used to declare and define the variables and can also be updated. 
+//let has block scope
 
 let FullName="tony stark";
 let age=21;
 let totalPrice=100;
 
-// var used till 2015. it can be redeclared and updated hence not used. Var has global scope
-//const -> here variables cannot be redeclared or updated. const has block scope
+// var used till 2015. it can be redeclared and updated hence not used. 
+//Var has global scope
+//const -> here variables cannot be redeclared or updated. 
+//const has block scope
 
 const age_=24;
 // age_=23;
 console.log(age);
 
 
-//we can also just declare the variables and not assign any values to it. by default the variables are assigned "undefined"
+//we can also just declare the variables and not assign any values to it. 
+//by default the variables are assigned "undefined"
  let a;
  console.log(a);
 
@@ -26,7 +30,9 @@ console.log(age);
 
 
  //Data Types
- console.log(typeof FullName); //string will be printed as tony stark is stored here
+ console.log(typeof FullName); 
+ 
+ //string will be printed as tony stark is stored here
  
  let var1= BigInt("123");
  console.log(var1);//123n will be printed
