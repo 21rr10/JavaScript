@@ -1,0 +1,219 @@
+Rules
+    -> Variables names are case sensitive;
+    -> Only letters,digits.underscore and $ is allowed.
+    -> Space isn't allowed
+    -> Only a letter, underscore or & should be the first character
+    -> Reserved words cannot be Variable names.
+
+Reserved words have a special meaning a javascript and as such cannot be used a Variable names.
+
+var: not used now days.
+here caribles and can be redeclared.
+let : Variable cannot be re-declared but can be updated.
+
+Data Types
+    PRIMITIVE DATA TYPES
+        Number
+        String
+        Boolean
+        Undefined
+        Null 
+        BigInt used to sotre numbers
+        Symbol
+    NON PRIMITIVE DATA TYPES
+        objects : typeof null is objects
+
+
+comments in JS
+// single line comments
+/* multiline
+comments */
+
+
+OPERATORS
+it is used to perform some operation of Data
+Expression : a+b;
+ where a and b are operands and '+' is an operator.
+
+    Arithmetic OPERATORS
+        +,-,*,/,%
+        Modulus-- %
+        Eponentiation-- **
+        Increment
+            Post increment: a++,b++
+            Pre increment:  ++a, ++b
+        Decrement
+            Post decrement: a--,b--
+            Pre decrement:  --a, --b
+    
+    Assignment OPERATORS
+        =, +=, -=, *=, %=, **=
+    
+    Comparison OPERATORS
+        Equal to (==)
+        Equal to and type (===)
+        not equal to(!=)
+        not euqal to and type(!==)
+        >
+        <
+        >=
+        <=
+    Logical OPERATORS
+        && logical and
+        || logical or
+        !  logical NOT
+
+CONDITIONAL STATEMENTS
+
+    *** if statement
+        if(){
+
+        }
+    ex:
+    let color;
+    if(mode==="dark-mode"){
+        color="black";
+    }
+
+    *** if else STATEMENTS
+        if(){
+
+        }else{
+
+        }
+    ex:
+    let mode ="blue"; 
+    let color;
+     if(mode=="dark"){
+        color="black";
+     } 
+     else{
+        color="white";
+     } 
+    
+
+    *** else-if STATEMENTS
+    if(){
+
+    }else if(){
+
+    }else{
+
+    }
+
+
+    ex:
+    if(age<18){
+        console.log("Junior);
+    }
+    else if(age>60)|{
+        console.log("senior");
+    }
+    else{
+        console.log("middle aged");
+    }
+
+TERNARY OPERATORS
+
+condition? true output: false output;
+ age>18?"adult":"child";
+
+
+LOOPS
+
+Loops are used to excute a piece of code again and again
+different types of loops are 
+- for loop
+- while loop
+- do-while loop
+
+-- for loop
+    for(initialisation; condition; updation){
+
+    }
+-- while loop
+    while(condition){
+
+    }
+-- do while loop
+    do{
+
+    }while(condition);
+-- for-of loop
+    for(let value of strVar){
+
+    }
+    we make a string variable(str); 
+    all the characters of the string will be printed
+    one by one. For-of loop has no need for initialisation
+    updation or condition.
+-- for-in loop
+    for(let key in objVar){
+
+    }
+    suppose we create an object student
+    let student={
+        name:"rahul",
+        age: 20,
+        cgpa:8.3,
+        isPass:true
+    };
+    for in loop will print the keys of the object student.
+    here it will print name,age,cgpa,isPass
+    To print the value of each key 
+    console.log(student[key]);
+
+
+STRINGS
+Strings is a sequence of character used to represent text
+
+    -- creation of a String
+        let str="heloo there";
+        or
+        let str='heloooooo there';
+    Strings have inbuilt properties and functions called methods
+    for example:
+    length : to calculate the length of anystring
+    let str="hello";
+    let len=str.length;
+
+    string behaves like an object.
+    to extract a character at a position we can
+    str[pos];
+
+    TEMPLATE LITERALS in JS
+    Its a way to have embedded expressions in Strings
+    `this is a template literal`
+    Its usage is in
+    let obj={
+    item:"pen",
+    price:10,
+    };
+    console.log("the cost of ",obj.item," is ",obj.price);
+    //instead of printing in bits and pieces we can print in one\
+    //string itself using template literals
+    let output=`The cost of ${obj.item} is ${obj.price} `;
+    console.log(output);
+
+    This phenomenon is String Interpolation where
+    `string text ${expression} string text`;
+    we can perform operation inside ${}
+
+    ESCAPE characters
+    \n : it gives new line to the Strings
+    \t: tab Space
+
+STRINGS METHODS IN JS
+
+These are built-in fucntions to manipulate string
+
+-> str.toUpperCase();
+-> str.toLowerCase();
+-> str.trim();// it removes whitespaces from starting and end
+ strings are immutable in JS unless using replace method;
+ no change takes places in original string. new string needs to be created
+->str.slice(start,end); returns substring of a string
+->str.concat(str2); joins 2 strings
+->str.replace(searchVal,newVal);// replace the first occurrence of search value
+->str.replaceAll(searchVal,NewVal);
+->str.charAt(pos);
