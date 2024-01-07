@@ -217,3 +217,55 @@ These are built-in fucntions to manipulate string
 ->str.replace(searchVal,newVal);// replace the first occurrence of search value
 ->str.replaceAll(searchVal,NewVal);
 ->str.charAt(pos);
+
+
+
+        ARRAYS
+        It is a collection of items of same type
+        although we can store diff types
+
+        creation of ARRAYS:
+        let heroes=["thor","ironman"];
+        let marks=[1,2,3,4,5,6];
+        
+        we can calculate the length of array using .length
+        typeof of array is object. 
+        It has a key:value pair where key is the index
+
+        Array is mutable.
+
+        Array methods
+         let food=["potato","apple","lychee","tomato"];
+            ->Push(): add at end
+             food.push("chips");
+
+            ->Pop(): delete from end and return;
+             console.log(food.pop(),food);
+
+            ->toString(): converts array to string and
+             original array remains the same
+             console.log(food.toString());
+
+            ->concat(): joins multiple arrays and returns result
+            let list=["jackfruit","guava"];
+            let allFood=food.concat(list);
+
+            ->unshift(): add to start
+            allFood.unshift("Pineapple");
+
+            ->shift(): delete from start and return
+            console.log(allFood.shift(),"\n",allFood);
+
+            ->slice(): return a piece of the array
+                slice(startidx,endidx);
+              console.log(allFood.slice(2,4));
+            note: original arrray doesnt change
+            ->splice(): change original array  
+            suppose we want to delete elements from the 
+            array, then provide the index to start the operation
+            from and state the no. of elements to be deleted
+
+            splice(startidx,delcount);
+            to add.
+            splice(startidx,delcount);
+        
