@@ -1,0 +1,9 @@
+.para{
+    border: 1px solid black;
+    /* background-color: yellow; */
+    color: black;
+}
+
+.newClass{
+    background-color: yellow;
+}
