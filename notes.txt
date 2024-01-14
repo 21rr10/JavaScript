@@ -362,18 +362,233 @@ Some more array methods
     });
     console.log(res);
 
+DOM Document Object Manipulation
+
+HTML: ITs the skeleton of the website
+CSS: It does the styling of the website
+JS: It gives the logical part 
+
+HTML, CSS AND JS are written in three different files
+because :
+->It increaes the readability of the code
+->it promotes of the modularity(divides into smaller parts)
+->helps with browser caching
+
+Window object :
+The window object represents an open window in a browser.
+It is a browser's object(not js's) and is automatically
+created by the browser.
+It is a global object with lots of properties and methods
+
+DOM
+it is a tree like structe made of nodes such as window 
+When a browser is loaded, the browser creates a Document
+Object Model (DOM) of the page
+WINDOW->DOCUMENT->HTML-->HEAD->(META,TITLE,LINK)
+                      |
+                      |
+                      |
+                      |
+                      -->BODY(DIV,SCRIPT)
+                               |
+                               ->DIV->(IMG,H1,P,DIV)
+Whatever html code we write attached with javascript 
+it is converted into an object inside js and can be accessed
+inside js.the special object created is called Document
+which is inside window object
+
+console.log() is used to print
+console.dir() is used to print the properties and methods 
+of the special object (such as document)
+
+DOM is used for dynamic manipulation inside a webpage
+
+DOM Manipulation
+-> Selecting withh index: document.getElementById("myId"); styling for id is done by using #. when an id element doesnt exist "null" is printed
+-> Selecting with class: document.getElementByClassName("myclass");styling for class is done by using (.).It returns HTML collections.when a class element dooesnt exist , an empty HTML collect is returned.
+->Selecting with tag: document.getElementByTageName("p");styling for tag is done by using tag name .It returns HTML collections.when a tag element dooesnt exist , an empty HTML collect is returned.
+->Query selector: inside query selector we can pass id,class or tag
+    document.querySelector("myId/myClass/tag");
+    //returns first element
+    document.querySelectorAll("myId/myClass/tag");
+    //returns a Nodelist
+
+
+properties
+
+-> tagName : returns atg for element nodes.
+-> innerText: returns the text content of the elemtnts and all it children
+->innerHTML : returns the plain text or HTML contents in the element. its advantage is tht we can write the html tags(in console)
+-> textContent : returns textual content even for hidden elements
 
 
 
+DOM tree has three tyoes of nodes
+    textnodes
+    comments
+    elements
+DOM always works on element nodes
+by default the first node inside body tag is textnode
 
 
+ATTRIBUTES
+= getAttribute(attr)// used to get the attribute value
+= setattribute(attr,val)//to set the attribute value
 
+STYLE
+= node.style
 
+INSERT elements
+steps: 1>create ..suppose button
+       2>add 
 
+to create we write
+        document.createElement("div");
+to show the property on the screen there are four methods
+        = node.append(el)//adds at the end of the node(inside)
+        =node.prepend(el)//adds at the start of the node(inside)
+        = node.before(el)//adds before the node)outside
+        =node.after(el)//adds after the node(outisde)
 
-
-
-
-
-
+DELETE ELEMENTS 
+= node.remove()//removes the node
+appendChild();
+removeChild();
+problem of setAttribute can be solved using classList
         
+
+
+EVENTS 
+The change in  the state of an object is known as an Event 
+THey are fired to notify the code of "interesting changes"
+that may affect code execution.
+
+Mouse events(clcik,double click etc.)
+keyboard events ((key press,keyup,keydown))
+form events(submit etc)
+print events & many more
+
+Its called event handling in js
+writing the events in the html tags is called inline handling
+
+A better approach is writing the events in js files
+ node.event=()=>{
+
+ }
+ Eg. btn.onclick=()=>{
+
+ }
+
+ an an event is handled in inline method and also in js file,
+ the priority is given to the event handling in js file
+
+
+ EVENT OBJECT 
+ It is a special object that has details about the event
+
+ All event handlers have access to the event object's properties and methods.
+
+ node.event=(e)=>{
+
+ }
+ e.type, e.target, e.client1, e.client2
+
+ EVENT LISTENERS
+
+ node.addEventListener(event,callback); callback is aka handler
+ node.removeEventListerner(event,callback);
+
+ Note: the callback reference should be same to remove
+
+
+
+CLASS AND OBJECTS 
+
+    PROTOTYPES IN JS
+    A JS object is an entity having state and behaviour(properties and methods)
+    JS objects have a special property called prototype.
+    We can set prototype using  __proto__
+    whenever we create an object in js a prototype object is created hwich has special properties and methods.
+    ->Its type is a reference to an onject.
+    -> If an object and protoytpe have same method ,objects method will be used.
+    Eg.:
+         const employee={
+            calcTax: ()=>{
+                console.log("Tax rate is 10%");
+            },
+        };
+
+        const karanArjun1={
+            salary:50000,
+            calcTax: ()=>{
+                console.log("Tax rate is 10%");//this will get the priority
+            },
+        };
+    
+    CLASSES IN JS
+     Class is a program-code temp,ate for creating OBJECTS.
+     Those objects will have some state(variables) & some behaviour(functions) inside it.
+
+     class MyClass{
+        constructor(){
+
+        }
+        myMethods(){
+
+        }
+     }
+
+     let myObj=new MyClass();
+
+     CONSTRUCTORS 
+     constructor method is automatically invoked by new keyword
+     It initialises tht object.
+
+     INHERITANCE IN JS
+    
+    Inheritance is passing down the properties and methods from parent class to child class
+
+    class parent{
+
+    }
+    class child extends Parent{
+
+    }
+     
+    If child and parent have the same method, child's method will be used.[Method overriding]
+    
+    super keyword
+
+    the super keyword is used to call the constructor of its parent class to access the parent's properties amd methods
+
+    super(args)//calls parent's constructor
+    super.parentMethod(args)
+
+
+
+    Error handling
+
+    try-catch Blocks
+
+    try{
+        normal code
+    }
+    catch(){
+
+    }
+
+
+Callbacks,Promises and Async Await
+
+async await>>promise chains>>callback hell
+
+
+Sync in JS
+
+Synchronous means the code runs in a particular sequence of instructions given in the program.
+Each instruction waits for the previous instruction to complete its execution.
+
+Asynchronous 
+
+Due to Synchronous programming, sometimes important things get blocked due to some previous instructions, which causes a delay in the UI
+Asynchronous code execution allows to execute next instructions immediately and doesnt block the flow.
