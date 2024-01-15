@@ -592,3 +592,4 @@ Asynchronous
 
 Due to Synchronous programming, sometimes important things get blocked due to some previous instructions, which causes a delay in the UI
 Asynchronous code execution allows to execute next instructions immediately and doesnt block the flow.
+   
